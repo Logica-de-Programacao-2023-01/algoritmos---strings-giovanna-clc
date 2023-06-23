@@ -1,0 +1,101 @@
+//Exercício 01//
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var str1, str2 string
+	fmt.Print("Digite a primeira string: ")
+	fmt.Scanln(&str1)
+	fmt.Print("Digite a segunda string: ")
+	fmt.Scanln(&str2)
+
+	concatenated := str1 + str2
+	fmt.Println("Concatenação:", concatenated)
+}
+
+//Exercício 02//
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var str string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&str)
+
+	length := len(str)
+	fmt.Println("Número de caracteres:", length)
+}
+
+//Exercício 03//
+
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var str string
+	var char string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&str)
+	fmt.Print("Digite um caractere: ")
+	fmt.Scanln(&char)
+
+	count := strings.Count(str, char)
+	fmt.Println("Número de ocorrências:", count)
+}
+
+//Exercício 04//
+
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var str string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&str)
+
+	uppercase := strings.ToUpper(str)
+	fmt.Println("String em maiúsculo:", uppercase)
+}
+
+//Exercício 05//
+
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var str string
+	var n int
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&str)
+	fmt.Print("Digite um número: ")
+	fmt.Scanln(&n)
+
+	if n > len(str) {
+		n = len(str)
+	}
+
+	substring := str[:n]
+	uppercase := strings.ToUpper(substring)
+	result := uppercase + str[n:]
+	fmt.Println("String com as n primeiras letras em maiúsculo:", result)
+}
